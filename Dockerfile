@@ -1,11 +1,12 @@
 # multistage build
-FROM golang:1.21-alpine AS builder
+FROM golang:1.25-alpine AS builder
 WORKDIR /src
 
-# cache deps
+# cache dependencies
 COPY go.mod go.sum ./
 RUN apk add --no-cache git && go mod download
 
+# build
 COPY . .
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o /app ./cmd/app
 

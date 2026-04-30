@@ -1,0 +1,30 @@
+# Binaries
+/bin
+/obj
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Go build cache
+**/pkg
+**/vendor
+
+# VCS
+.git
+.gitignore
+
+# local files
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+
+# Docker files
+Dockerfile
+docker-compose.yml
+
+# IDE files
+.vscode
+.idea
