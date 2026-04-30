@@ -1,0 +1,11 @@
+# Binaries
+/bin/
+
+# Vendor
+/vendor/
+
+# Env
+.env
+
+# Logs
+*.log
